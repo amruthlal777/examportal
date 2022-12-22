@@ -1,0 +1,27 @@
+####### client ######
+dist
+tmp
+out-tsc
+
+node_modules
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode
+.sass-cache
+connect.lock
+coverage
+libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+typings
+assets
+ecsconfig
+.DS_Store
+Thumbs.db
+target/
