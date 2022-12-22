@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <mat-card class="mt20">
+                    <mat-card-header>
+                        <mat-card-title>
+                          Read Instructions carefully!
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            One more step to go
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+                        <ul *ngIf="!quiz.instruction">
+                            <li>This quiz is for practice purpose.</li>
+                            <li>You have to submit the quiz in <b>{{quiz.numberOfQuestions*2}} Minutes.</b></li>
+                            <li>You can attempt the questions any number of times.</li>
+                            <li>There are <b>{{quiz.numberOfQuestions}} Questions</b> in this Quiz.</li>
+                            <li>Each question carries <b>{{quiz.maxMarks/quiz.numberOfQuestions}} Marks.</b></li>
+                            <li>There is no <b>Negetive</b> marking for the wrong ones.</li>
+                            <li>All questions are of MCQ Types.</li>
+                        </ul>
+                        <ul>
+                            <span [innerHTML]="quiz.instruction"></span>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click on <b>Start Quiz</b> to start the Quiz.</li>
+                            <li>Time starts the moment you click on Start Quiz.</li>
+                            <li>This Quiz cannot be resumed if interrupted in between.</li>
+                            <li>Click on <b>Submit Quiz</b> on completion of the quiz.</li>
+                        </ul>
+                    </mat-card-content>
+
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="primary" (click)="startQuiz()">Start Quiz</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
