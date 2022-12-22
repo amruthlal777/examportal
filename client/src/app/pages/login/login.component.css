@@ -1,0 +1,12 @@
+.full-width{
+    width:100%;
+}
+.marginRow{
+    margin:0px !important; 
+}
+
+.mat-green {
+    color: white;
+    background-color: forestgreen;
+  }
+  
